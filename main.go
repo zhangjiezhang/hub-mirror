@@ -151,7 +151,7 @@ func main() {
 {{end}}	
 docker pull {{ .Target }}
 docker tag {{ .Target }} {{ .Source }}
-
+docker rmi {{ .Target }}
 {{ end -}}`)
 	if err != nil {
 		panic(err)
